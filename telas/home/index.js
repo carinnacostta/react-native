@@ -65,7 +65,7 @@ export default function App({route}) {
             <View style={styles.maisInfo}>
               <View style={{marginTop:10}}>
                 <Text style={styles.filmeTitle}> {movies[activeIndex].title} </Text>
-                <Text style={styles.filmeDesc}> {movies[activeIndex].text} </Text>
+                <Text style={styles.filmeDesc}> {movies[activeIndex].description} </Text>
               </View>
                 
             </View>
