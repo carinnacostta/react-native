@@ -12,6 +12,7 @@ import {
   import Icon from 'react-native-vector-icons/MaterialIcons';
   import Carousel from 'react-native-snap-carousel';
 import { useNavigation } from '@react-navigation/core';
+import items from '../../assets/movies.json';
 
 const {width: screenWidth, height: screenHeight} = Dimensions.get('window');
 
@@ -21,71 +22,9 @@ export default function App({route}) {
 
   const navigation = useNavigation();
 
-  const [lista] = useState([
-    {
-        title:"Malévola",
-        text: "Malévola, uma jovem de coração puro, vive em um pacífico reino na floresta, até o dia em que um exército invasor ameaça a harmonia da região, fazendo com que ela se torne a mais feroz protetora do reino.",
-        release: 2018,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/background.jpg'
-    },
-    {
-        title:"Steve Jobs",
-        text: "O filme destaca momentos decisivos na vida de Steve Jobs, desde o lançamento do primeiro Macintosh, em 1984, e a criação da NeXT Inc, até a introdução revolucionária do iMac.",
-        release: 2020,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/steve.jpg'
-    },
-    {
-        title:"Star Wars",
-        text: "Com o retorno do Imperador Palpatine, a Resistência toma a frente da batalha. Treinando para ser uma completa Jedi, Rey se encontra em conflito com passado e futuro.",
-        release: 2020,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/starwars.jpg'
-    },
-    {
-        title:"Matrix",
-        text: "Um jovem programador é atormentado por estranhos pesadelos nos quais sempre está conectado por cabos a um imenso sistema de computadores do futuro.",
-        release: 2020,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/matrix.jpg'
-    },
-    {
-        title:"A Menina que roubava Livros",
-        text: "Durante a Segunda Guerra Mundial, uma jovem garota chamada Liesel Meminger sobrevive fora de Munique lendo os livros que ela rouba.",
-        release: 2020,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/livros.jpg'
-    },
-    {
-        title:"The Social Dilema",
-        text: "O Dilema das Redes nos mostra como os magos da tecnologia possuem o controle sobre a maneira em que pensamos, agimos e vivemos.",
-        release: 2020,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/dilema.jpg'
-    },
-    {
-      title:"Cavalo de Guerra",
-      text: "A história da amizade entre Albert e seu cavalo Joey. Depois de ser vendido para a cavalaria inglesa durante a Primeira Guerra Mundial, o corcel emociona ambos os lados com sua bravura.",
-      release: 2020,
-      img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/cavalo.jpg'
-      
-  },
-    {
-     title:"Viúva Negra",
-      text: "Em Viúva Negra, após seu nascimento, Natasha Romanoff (Scarlett Johansson) é dada à KGB, que a prepara para se tornar sua agente definitiva.",
-      release: 2020,
-      img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/black.jpg'
-  },
+  const [movies] = useState(items);
 
-    {
-     title:"Avatar",
-     text: "No exuberante mundo alienígena de Pandora vivem os Na'vi, seres que parecem ser primitivos, mas são altamente evoluídos. Como o ambiente do planeta é tóxico, foram criados os avatares.",
-     release: 2020,
-     img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/avatar.jpg'
- },
-   {
-    title:"Aquaman",
-    text: "A cidade de Atlantis, que já foi lar de uma das mais avançadas civilizações do mundo, agora é um reino submerso dominado pelo ganancioso Rei Orm.",
-    release: 2020,
-    img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/aquaman.jpg'
-},
-  ]);
-  const [background, setBackground] = useState (lista[0].img)
+  const [background, setBackground] = useState (movies[0].img)
   const [activeIndex, setActiveIndex ] = useState(0);
 
   const _rederItem = ({item, index}) => {
@@ -120,13 +59,13 @@ export default function App({route}) {
             </View>
            
             <View style={styles.slideView}>
-              <Carousel style={styles.carousel} ref={carouselRef} data={lista} renderItem={_rederItem} sliderWidth={screenWidth} itemWidth={200} inactiveSlideOpacity= {0.5} onSnapToItem= {(index) => { setBackground(lista[index].img); setActiveIndex(index); }}/>        
+              <Carousel style={styles.carousel} ref={carouselRef} data={movies} renderItem={_rederItem} sliderWidth={screenWidth} itemWidth={200} inactiveSlideOpacity= {0.5} onSnapToItem= {(index) => { setBackground(movies[index].img); setActiveIndex(index); }}/>        
             </View>
 
             <View style={styles.maisInfo}>
               <View style={{marginTop:10}}>
-                <Text style={styles.filmeTitle}> {lista[activeIndex].title} </Text>
-                <Text style={styles.filmeDesc}> {lista[activeIndex].text} </Text>
+                <Text style={styles.filmeTitle}> {movies[activeIndex].title} </Text>
+                <Text style={styles.filmeDesc}> {movies[activeIndex].text} </Text>
               </View>
                 
             </View>
