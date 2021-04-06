@@ -118,11 +118,6 @@ export default function App({route}) {
                 <Icon name="search" color="#000" size={25}/>
               </TouchableOpacity>
             </View>
-
-            <Text style = {styles.textInicial}>
-              
-            </Text>
-
            
             <View style={styles.slideView}>
               <Carousel style={styles.carousel} ref={carouselRef} data={lista} renderItem={_rederItem} sliderWidth={screenWidth} itemWidth={200} inactiveSlideOpacity= {0.5} onSnapToItem= {(index) => { setBackground(lista[index].img); setActiveIndex(index); }}/>        
@@ -158,14 +153,12 @@ const styles = StyleSheet.create ({
   },
 
   viewSearch: {
-    marginTop: 40,
     backgroundColor: '#fff',
     elevation: 10,
     borderRadius: 5,
-    marginVertical: 10,
     width: '95%',
     flexDirection: 'row',
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
 
   input: {
@@ -202,6 +195,7 @@ const styles = StyleSheet.create ({
   },
 
   carouselImg: {
+    marginVertical: 20,
     alignSelf: 'center',
     width: 200,
     height: 290,
@@ -255,6 +249,7 @@ const styles = StyleSheet.create ({
     marginLeft: 10,
     marginVertical: 10,
     textAlign: 'center',
+    padding: 10,
   },
 
 
