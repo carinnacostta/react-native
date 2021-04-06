@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Dimensions, TouchableOpacity, ImageBackground, Image } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, TouchableOpacity, ImageBackground, Image, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import bgImage from '../../assets/background.jpg';
 import logo from '../../assets/logo.png';
@@ -9,44 +9,42 @@ export var width = Dimensions.get('window').width;
 
 
 const Login = ({navigation}) => {
-    const handleScreenLogin = () => {
-        navigation.navigate('home');
+  const [user, onChangeText] = React.useState("");
+    
+  const handleScreenLogin = (user) => {
+    navigation.navigate('home', {user: user});
+  }
 
+  return (
 
-    }
-    return (
-
-        <ImageBackground source= {bgImage} style={styles.backgroundContainer}>
-            <View>
-                <Image source= {logo} style={styles.logo} />
-            </View>
-        
-        <View style={styles.container}>
+    <ImageBackground source= {bgImage} style={styles.backgroundContainer}>
+      {/* <View>
+          <Image source= {logo} style={styles.logo} />
+      </View> */}
+    
+      <View style={styles.container}>
 
         <Text style={styles.titulo}> Mais que cinema </Text>
         <Text style={styles.paragrafo}> A melhor forma de escolher filmes em um clique! </Text>
-       
 
-           
-        <TouchableOpacity style={styles.botao} onPress={() => handleScreenLogin() }>
-        
-           <Text style={styles.botaoTexto}>Entrar</Text>
-        
-        </TouchableOpacity>
-        
-
-    </View>
-
-        <View style={styles.bottom}>
-            <View style={styles.socials}>
-                <Icon style={styles.socialsItems} name="facebook" size={20} color="#fff"/>
-                <Icon style={styles.socialsItems} name="instagram" size={20} color="#fff"/>
-                <Icon style={styles.socialsItems} name="twitter" size={20} color="#fff"/>
-            </View>
+        <View>
+          <TextInput
+            style={styles.input}
+            onChangeText={onChangeText}
+            value={user}
+            placeholder={"Digite seu nome"}
+          />
         </View>
+          
+        <TouchableOpacity style={styles.botao} onPress={() => handleScreenLogin(user) }>        
+          <Text style={styles.botaoTexto}>Entrar</Text>        
+        </TouchableOpacity>
+      
+      </View>
+
     </ImageBackground>
 
-    )
+  )
 
 }
 
@@ -86,7 +84,7 @@ const styles = StyleSheet.create({
       fontSize: 15,
       color: '#fff',
       marginTop: 10,
-      marginBottom: 70,
+      marginBottom: 20,
     
     },
 
@@ -119,6 +117,16 @@ const styles = StyleSheet.create({
     socialsItems: {
         marginLeft: 10,
         marginRight: 10,
+    },
+
+    input: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      margin: 15,
+      backgroundColor: '#fff',
+      padding: 15,
+      width: 300,
+      borderRadius: 20
     }
 
 });

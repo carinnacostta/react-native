@@ -11,11 +11,16 @@ import {
   TouchableOpacity } from 'react-native';
   import Icon from 'react-native-vector-icons/MaterialIcons';
   import Carousel from 'react-native-snap-carousel';
+import { useNavigation } from '@react-navigation/core';
 
 const {width: screenWidth, height: screenHeight} = Dimensions.get('window');
 
-export default function App() {
+export default function App({route}) {
+
   const carouselRef = useRef(null);
+
+  const navigation = useNavigation();
+
   const [lista] = useState([
     {
         title:"Malévola",
@@ -60,7 +65,6 @@ export default function App() {
       img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/cavalo.jpg'
       
   },
-
     {
      title:"Viúva Negra",
       text: "Em Viúva Negra, após seu nascimento, Natasha Romanoff (Scarlett Johansson) é dada à KGB, que a prepara para se tornar sua agente definitiva.",
@@ -83,6 +87,7 @@ export default function App() {
   ]);
   const [background, setBackground] = useState (lista[0].img)
   const [activeIndex, setActiveIndex ] = useState(0);
+
   const _rederItem = ({item, index}) => {
     return (
       <View>
@@ -102,6 +107,11 @@ export default function App() {
      <View style={{flex:1, height: screenHeight}}>
         <View style={{...StyleSheet.absoluteFill, backgroundColor: '#000'}}>
           <ImageBackground source={{uri: background }} style={styles.imgBg} blurRadius={5}>
+            
+            <View>
+              <Text style = {styles.textUser}>Olá, { route.params?.user } tudo bem?</Text>
+            </View>
+            
             <View style={styles.viewSearch}>
               <TextInput style={styles.input} placeholder="Buscar Filmes"/>
               <TouchableOpacity style={styles.icon}>
@@ -177,39 +187,39 @@ const styles = StyleSheet.create ({
     fontWeight: 'bold',
     marginLeft: 10,
     marginVertical: 10,
-   },
+  },
 
-   slideView: {
+  slideView: {
     width: '100%',
     height: 350,
     justifyContent: 'center',
     alignItems: 'center',
-   },
+  },
 
-   carousel: {
+  carousel: {
     flex: 1,
     overflow: 'visible',
-   },
+  },
 
-   carouselImg: {
+  carouselImg: {
     alignSelf: 'center',
     width: 200,
     height: 290,
     borderRadius: 12,
     backgroundColor: 'rgba(0,0,0,0.5)',
-   },
+  },
 
-   carouselText: {
+  carouselText: {
     display: 'none',
-   },
+  },
 
-   carouselIcon: {
+  carouselIcon: {
      position: 'absolute',
      top: 15,
      right: 15,
-   },
+  },
 
-   maisInfo: {
+  maisInfo: {
     backgroundColor: '#fff',
     width: screenWidth,
     height: screenHeight,
@@ -218,9 +228,9 @@ const styles = StyleSheet.create ({
     flexDirection: 'row',
     justifyContent: 'space-around',
 
-   },
+  },
 
-   filmeTitle: {
+  filmeTitle: {
     paddingLeft: 10,
     paddingRight: 10,
     fontSize: 22,
@@ -228,18 +238,24 @@ const styles = StyleSheet.create ({
     color: '#131313',
     marginBottom: 3,
     textAlign: 'center'
-   },
+  },
 
-   filmeDesc: {
+  filmeDesc: {
     paddingLeft: 10,
     paddingRight: 10,
     fontSize: 14,
     color: '#131313',
     textAlign: 'center',
-    
-    
-    
-   },
+  },
+
+  textUser: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginLeft: 10,
+    marginVertical: 10,
+    textAlign: 'center',
+  },
 
 
 });
