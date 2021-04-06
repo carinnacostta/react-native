@@ -48,7 +48,7 @@ export default function App({route}) {
           <ImageBackground source={{uri: background }} style={styles.imgBg} blurRadius={5}>
             
             <View>
-              <Text style = {styles.textUser}>Olá, { route.params?.user } tudo bem?</Text>
+              <Text style = {styles.textUser}>Olá { route.params?.user }, o que assistirá hoje?</Text>
             </View>
             
             <View style={styles.viewSearch}>

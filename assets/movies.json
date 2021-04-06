@@ -2,63 +2,83 @@
     {
         title:"Malévola",
         description: "Malévola, uma jovem de coração puro, vive em um pacífico reino na floresta, até o dia em que um exército invasor ameaça a harmonia da região, fazendo com que ela se torne a mais feroz protetora do reino.",
-        release: 2018,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/background.jpg'
+        release: 2014,
+        img: "https://carinacostasantos.com.br/wp-content/uploads/2021/03/background.jpg",
+        cast: "Angelina Jolie, Elle Fanning",
+        director: "Joachim Rønning, Robert Stromberg"
     },
     {
         title:"Steve Jobs",
         description: "O filme destaca momentos decisivos na vida de Steve Jobs, desde o lançamento do primeiro Macintosh, em 1984, e a criação da NeXT Inc, até a introdução revolucionária do iMac.",
-        release: 2020,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/steve.jpg'
+        release: 2015,
+        img: "https://carinacostasantos.com.br/wp-content/uploads/2021/03/steve.jpg",
+        cast: "Michael Fassbender, Kate Winslet",
+        director: "Danny Boyle"
     },
     {
-        title:"Star Wars",
+        title:"Star Wars IX: Ascensão Skywalker",
         description: "Com o retorno do Imperador Palpatine, a Resistência toma a frente da batalha. Treinando para ser uma completa Jedi, Rey se encontra em conflito com passado e futuro.",
-        release: 2020,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/starwars.jpg'
+        release: 2019,
+        img: "https://carinacostasantos.com.br/wp-content/uploads/2021/03/starwars.jpg",
+        cast: "Carrie Fisher, Mark Hamill, Adam Driver, Daisy Ridley",
+        director: "J. J. Abrams"
     },
     {
         title:"Matrix",
         description: "Um jovem programador é atormentado por estranhos pesadelos nos quais sempre está conectado por cabos a um imenso sistema de computadores do futuro.",
-        release: 2020,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/matrix.jpg'
+        release: 1999,
+        img: "https://carinacostasantos.com.br/wp-content/uploads/2021/03/matrix.jpg",
+        cast: "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
+        director: "The Wachowskis"
     },
     {
         title:"A Menina que roubava Livros",
         description: "Durante a Segunda Guerra Mundial, uma jovem garota chamada Liesel Meminger sobrevive fora de Munique lendo os livros que ela rouba.",
-        release: 2020,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/livros.jpg'
+        release: 2013,
+        img: "https://carinacostasantos.com.br/wp-content/uploads/2021/03/livros.jpg",
+        cast: "	Geoffrey Rush, Emily Watson, Sophie Nélisse",
+        director: "Brian Percival"
     },
     {
         title:"The Social Dilema",
         description: "O Dilema das Redes nos mostra como os magos da tecnologia possuem o controle sobre a maneira em que pensamos, agimos e vivemos.",
         release: 2020,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/dilema.jpg'
+        img: "https://carinacostasantos.com.br/wp-content/uploads/2021/03/dilema.jpg",
+        cast: "Tristan Harris, Aza Raskin, Justin Rosenstein",
+        director: "Jeff Orlowski"
     },
     {
       title:"Cavalo de Guerra",
       description: "A história da amizade entre Albert e seu cavalo Joey. Depois de ser vendido para a cavalaria inglesa durante a Primeira Guerra Mundial, o corcel emociona ambos os lados com sua bravura.",
-      release: 2020,
-      img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/cavalo.jpg'
+      release: 2011,
+      img: "https://carinacostasantos.com.br/wp-content/uploads/2021/03/cavalo.jpg",
+      cast: "David Thewlis, Benedict Cumberbatch",
+      director: "Steven Spielberg"
       
     },
     {
         title:"Viúva Negra",
         description: "Em Viúva Negra, após seu nascimento, Natasha Romanoff (Scarlett Johansson) é dada à KGB, que a prepara para se tornar sua agente definitiva.",
-        release: 2020,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/black.jpg'
+        release: 2021,
+        img: "https://carinacostasantos.com.br/wp-content/uploads/2021/03/black.jpg",
+        cast: "Scarlett Johansson, Florence Pugh, Rachel Weisz",
+        director: "Cate Shortland"
     },
 
     {
         title:"Avatar",
-        description: "No exuberante mundo alienígena de Pandora vivem os Na'vi, seres que parecem ser primitivos, mas são altamente evoluídos. Como o ambiente do planeta é tóxico, foram criados os avatares.",
-        release: 2020,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/avatar.jpg'
+        description: "No exuberante mundo alienígena de Pandora vivem os Na`vi, seres que parecem ser primitivos, mas são altamente evoluídos. Como o ambiente do planeta é tóxico, foram criados os avatares.",
+        release: 2009,
+        img: "https://carinacostasantos.com.br/wp-content/uploads/2021/03/avatar.jpg",
+        cast: "Sam Worthington, Zoe Saldana, Stephen Lang",
+        director: "James Cameron"
     },
     {
         title:"Aquaman",
         description: "A cidade de Atlantis, que já foi lar de uma das mais avançadas civilizações do mundo, agora é um reino submerso dominado pelo ganancioso Rei Orm.",
-        release: 2020,
-        img: 'https://carinacostasantos.com.br/wp-content/uploads/2021/03/aquaman.jpg'
+        release: 2018,
+        img: "https://carinacostasantos.com.br/wp-content/uploads/2021/03/aquaman.jpg",
+        cast: "Jason Momoa, Amber Heard, Willem Dafoe",
+        director: "James Wan"
     }
 ]
